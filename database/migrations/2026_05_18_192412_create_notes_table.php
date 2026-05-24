@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
+            // Foreign key ke tabel users untuk memastikan note milik user tertentu
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('title');
+            $table->text('content');
             $table->timestamps();
         });
     }
