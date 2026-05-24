@@ -4,9 +4,10 @@ namespace App\Livewire\Guest;
 
 use App\Models\Note;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use Illuminate\Support\Facades\Storage;
 use Livewire\WithPagination;
-use Livewire\WithFileUploads;
+use Livewire\Attributes\layout;
 
 use Livewire\Component;
 
@@ -23,7 +24,7 @@ class Landingpage extends Component
 
     public function logout()
     {
-        Auth::logout();
+        User::logout();
         return redirect()->route('landingpage');
     }
 
