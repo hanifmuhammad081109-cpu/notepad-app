@@ -3,12 +3,10 @@
 namespace App\Livewire\Auth;
 
 use Illuminate\Support\Facades\Auth;
-use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Layout('components.layouts.app')]
-#[Title('Login - Sistem Payroll')]
+#[Title('Login - Website NotePad')]
 
 class Login extends Component
 {
